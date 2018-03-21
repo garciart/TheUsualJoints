@@ -1,0 +1,10 @@
+﻿20150517
+Created this as a Web Application Project based on this information: https://our.umbraco.org/forum/umbraco-as-a-service/issues/46629-Problem-adding-616-via-NuGet
+Did Step 1 of this first, even if it says obsolete, to avoid the culture error: http://www.tsjensen.com/blog/post/2011/06/04/SQLite+On+Visual+Studio+2010+Setup+Instructions.aspx
+Followed these instructions next: http://www.tsjensen.com/blog/post/2012/11/10/SQLite-on-Visual-Studio-with-NuGet-and-Easy-Instructions.aspx
+Updated all references
+Modified the web.config file per the instruction shown here: http://stackoverflow.com/questions/26327811/unable-to-determine-the-provider-name-for-provider-factory-of-type-system-data
+Added web.config info from newjoints and E-Commerce in ASP.NET
+Installed SQL Server Compact/SQLite Toolbox 
+Created sqlite script from tuj_users.sdf (SQL Compact 4.0) into j_users.sqlite
+Created sqlite script from tuj_data.sdf (SQL Compact 4.0) into j_data.sqlite

@@ -1,0 +1,32 @@
+﻿88	Headquarters Live	50	2	headquarters-live.png	Live Music. Downtown Salisbury.		115 S Division St.	Salisbury	MD	21801	0	0	14433585329		vinnie@headquarterslive.com	http://headquarterslive.com/	https://www.facebook.com/HeadquartersLive	Salisbury’s Premier Live Music Venue! HQ LIVE is t (...)	headquarters-live-photo-01.jpg	headquarters-live-photo-02.jpg	headquarters-live-photo-03.jpg	headquarters-live-photo-04.jpg		headquarters.live.sby	1
+
+put back in web config
+
+<rule name="Canonical Hostname">
+    <match url="(.*)" />
+    <conditions logicalGrouping="MatchAll" trackAllCaptures="false">
+    <add input="{HTTP_HOST}" pattern="^www.mystore\.com$" negate="true" />
+    </conditions>
+    <action type="Redirect" url="http://www.mystore.com/{R:1}" />
+</rule>
+
+Do not use <pages pageBaseType="basepage" /> in Web.Config for now, due to files in the Account folder, unles you modify the Account folder web.config
+
+      <remove name="FormsAuthentication" />
+
+	<customErrors mode="On" defaultRedirect="~/error.aspx">
+      <error statusCode="400" redirect="~/error.aspx?code=400" />
+      <error statusCode="401" redirect="~/error.aspx?code=401" />
+      <error statusCode="403" redirect="~/error.aspx?code=403" />
+      <error statusCode="404" redirect="~/error.aspx?code=404" />
+      <error statusCode="409" redirect="~/error.aspx?code=409" />
+      <error statusCode="500" redirect="~/error.aspx?code=500" />
+      <error statusCode="501" redirect="~/error.aspx?code=501" />
+    </customErrors>
+
+strftime('%w', 'now'))
+
+        <area shape="rect" coords="0,0,96,32" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.theusualjoints.com" target="_blank" title="Share on Facebook!" alt="Share on Facebook!" />
+        <area shape="rect" coords="106,0,201,32" href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.theusualjoints.com&text=What%20to%20do%20in%20Ocean%20City%2C%20Salisbury%20and%20Rehoboth%20Beach!&via=theusualjoints" target="_blank" title="Tweet!" alt="Tweet!" />
+        <area shape="rect" coords="211,0,306,32" href="https://plus.google.com/share?url=http%3A%2F%2Fwww.theusualjoints.com" target="_blank" title="Share on Google+!" alt="Share on Google+!" />
+        <area shape="rect" coords="317,0,413,32" href="https://pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.theusualjoints.com&media=http%3A%2F%2Fwww.theusualjoints.com%2Fimages%2Ftuj-pinterest-736.png&description=What%20to%20do%20in%20Ocean%20City%2C%20Salisbury%20and%20Rehoboth%20Beach!" target="_blank" title="Pin It!" alt="Pin It!" />

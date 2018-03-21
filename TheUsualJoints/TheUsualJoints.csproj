@@ -1,0 +1,1315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E85E97F1-07E0-4CA4-BD91-4078DEF56D9F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>tuj_app</RootNamespace>
+    <AssemblyName>tuj-app</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=15.1.2.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ASP.NET AJAX Control Toolkit\Bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap, Version=3.3.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.3.7\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery, Version=3.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.1.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.5, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9.5\lib\Net45\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.3.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.3.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.1.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.1.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.1.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.1.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.SQLite, Version=1.0.97.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.2.0.0\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="about-us.aspx" />
+    <Content Include="About.aspx" />
+    <Content Include="Account\AddPhoneNumber.aspx" />
+    <Content Include="Account\Confirm.aspx" />
+    <Content Include="Account\Forgot.aspx" />
+    <Content Include="Account\Lockout.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Manage.aspx" />
+    <Content Include="Account\ManageLogins.aspx" />
+    <Content Include="Account\ManagePassword.aspx" />
+    <Content Include="Account\OpenAuthProviders.ascx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="Account\ResetPassword.aspx" />
+    <Content Include="Account\ResetPasswordConfirmation.aspx" />
+    <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
+    <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="Admin\advertiser-add.aspx" />
+    <Content Include="Admin\advertiser-edit.aspx" />
+    <Content Include="Admin\event-add.aspx" />
+    <Content Include="Admin\event-edit.aspx" />
+    <Content Include="Admin\link-add.aspx" />
+    <Content Include="Admin\link-edit.aspx" />
+    <Content Include="Admin\restaurant-add.aspx" />
+    <Content Include="Admin\restaurant-add-bak.aspx" />
+    <Content Include="Admin\restaurant-events.aspx" />
+    <Content Include="Admin\restaurant-image-2.aspx" />
+    <Content Include="Admin\restaurant-image-edit.aspx" />
+    <Content Include="Admin\restaurant-image.aspx" />
+    <Content Include="Admin\restaurant-info.aspx" />
+    <Content Include="Admin\restaurant-schedule.aspx" />
+    <Content Include="Admin\test-admin.aspx" />
+    <Content Include="App_Themes\desktop\dark-main-background.jpg" />
+    <Content Include="App_Themes\desktop\desktop.css" />
+    <Content Include="App_Themes\desktop\main-background.png" />
+    <Content Include="App_Themes\mobile\mobile-background.jpg" />
+    <Content Include="App_Themes\mobile\mobile.css" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\Antlr3.Runtime.dll" />
+    <Content Include="bin\AspNet.ScriptManager.bootstrap.dll" />
+    <Content Include="bin\AspNet.ScriptManager.jQuery.dll" />
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\HtmlAgilityPack.dll" />
+    <Content Include="bin\Microsoft.AspNet.FriendlyUrls.dll" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Core.dll" />
+    <Content Include="bin\Microsoft.AspNet.Identity.EntityFramework.dll" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Owin.dll" />
+    <Content Include="bin\Microsoft.AspNet.Web.Optimization.WebForms.dll" />
+    <Content Include="bin\Microsoft.Owin.dll" />
+    <Content Include="bin\Microsoft.Owin.Host.SystemWeb.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Cookies.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Facebook.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Google.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.MicrosoftAccount.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.OAuth.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Twitter.dll" />
+    <Content Include="bin\Microsoft.ScriptManager.MSAjax.dll" />
+    <Content Include="bin\Microsoft.ScriptManager.WebForms.dll" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Owin.dll" />
+    <Content Include="bin\System.Data.SQLite.dll" />
+    <Content Include="bin\System.Data.SQLite.EF6.dll" />
+    <Content Include="bin\System.Data.SQLite.Linq.dll" />
+    <Content Include="bin\System.Web.Optimization.dll" />
+    <Content Include="bin\System.Web.Providers.dll" />
+    <Content Include="bin\tuj-app.dll" />
+    <Content Include="bin\tuj-app.dll.config" />
+    <Content Include="bin\tuj-app.pdb" />
+    <Content Include="bin\WebGrease.dll" />
+    <Content Include="bin\x64\SQLite.Interop.dll" />
+    <Content Include="bin\x86\SQLite.Interop.dll" />
+    <Content Include="CitiesList.ascx" />
+    <Content Include="city.aspx" />
+    <Content Include="contact-block.ascx" />
+    <Content Include="contact-us.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="CountriesList.ascx" />
+    <Content Include="disclaimer.aspx" />
+    <Content Include="error.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="footer.ascx" />
+    <Content Include="HtmlPage1.html" />
+    <Content Include="images\about-rob.png" />
+    <Content Include="images\about-steve.png" />
+    <Content Include="images\admin-lores.png" />
+    <Content Include="images\ads\netflix-180a.jpg" />
+    <Content Include="images\ads\netflix-180.jpg" />
+    <Content Include="images\ads\advertise-here.png" />
+    <Content Include="images\ads\netflix-300.jpg" />
+    <Content Include="images\ads\netflix-300.png" />
+    <Content Include="images\ads\sle-camp-rehoboth-728.jpg" />
+    <Content Include="images\ads\sle-dtcc-728.jpg" />
+    <Content Include="images\ads\sle-wor-wic-728.jpg" />
+    <Content Include="images\cities\1\salisbury-md-base-300.png" />
+    <Content Include="images\cities\1\salisbury-md-facebook-profile-180.jpg" />
+    <Content Include="images\cities\1\salisbury-md-google-profile-250.jpg" />
+    <Content Include="images\cities\1\salisbury-md-og-image-400.jpg" />
+    <Content Include="images\cities\1\salisbury-md-profile-default-300.jpg" />
+    <Content Include="images\cities\1\salisbury-md-twitter-profile-400.jpg" />
+    <Content Include="images\cities\2\ocean-city-md-base-300.png" />
+    <Content Include="images\cities\2\ocean-city-md-facebook-profile-180.jpg" />
+    <Content Include="images\cities\2\ocean-city-md-google-profile-250.jpg" />
+    <Content Include="images\cities\2\ocean-city-md-og-image-400.jpg" />
+    <Content Include="images\cities\2\ocean-city-md-profile-default-300.jpg" />
+    <Content Include="images\cities\2\ocean-city-md-twitter-profile-400.jpg" />
+    <Content Include="images\cities\3\rehoboth-beach-de-base-300.png" />
+    <Content Include="images\cities\3\rehoboth-beach-de-facebook-profile-180.jpg" />
+    <Content Include="images\cities\3\rehoboth-beach-de-google-profile-250.jpg" />
+    <Content Include="images\cities\3\rehoboth-beach-de-og-image-400.jpg" />
+    <Content Include="images\cities\3\rehoboth-beach-de-profile-default-300.jpg" />
+    <Content Include="images\cities\3\rehoboth-beach-de-twitter-profile-400.jpg" />
+    <Content Include="images\cities\tuj-facebook-profile-180.png" />
+    <Content Include="images\cities\tuj-google-profile-250.png" />
+    <Content Include="images\cities\tuj-og-image-400.png" />
+    <Content Include="images\cities\tuj-pinterest-736.png" />
+    <Content Include="images\cities\tuj-profile-default-300.png" />
+    <Content Include="images\cities\tuj-twitter-profile-400.png" />
+    <Content Include="images\clear-default-header-logo.png" />
+    <Content Include="images\clear-ocean-city-md-us-300.png" />
+    <Content Include="images\clear-ocean-city-md-us.png" />
+    <Content Include="images\clear-rehoboth-beach-de-us-300.png" />
+    <Content Include="images\clear-rehoboth-beach-de-us.png" />
+    <Content Include="images\clear-salisbury-md-us-300.png" />
+    <Content Include="images\clear-salisbury-md-us.png" />
+    <Content Include="images\default-header-logo.jpg" />
+    <Content Include="images\disclaimer.jpg" />
+    <Content Include="images\disclaimer.png" />
+    <Content Include="images\error.gif" />
+    <Content Include="images\misc-back-hi.png" />
+    <Content Include="images\misc-back-lo.jpg" />
+    <Content Include="images\mobile-header-logo.png" />
+    <Content Include="images\noimageloaded.png" />
+    <Content Include="images\ocean-city-md.png" />
+    <Content Include="images\rehoboth-beach-de.png" />
+    <Content Include="images\restaurants\11\the-fountains-lagoon-bar-grill-photo-01.jpg" />
+    <Content Include="images\restaurants\11\the-fountains-lagoon-bar-grill-photo-02.jpg" />
+    <Content Include="images\restaurants\11\the-fountains-lagoon-bar-grill-photo-03.jpg" />
+    <Content Include="images\restaurants\11\the-fountains-lagoon-bar-grill-photo-04.jpg" />
+    <Content Include="images\restaurants\11\the-fountains-lagoon-bar-grill.png" />
+    <Content Include="images\restaurants\12\market-street-inn-restaurant-pub-photo-01.jpg" />
+    <Content Include="images\restaurants\12\market-street-inn-restaurant-pub-photo-02.jpg" />
+    <Content Include="images\restaurants\12\market-street-inn-restaurant-pub-photo-03.jpg" />
+    <Content Include="images\restaurants\12\market-street-inn-restaurant-pub.png" />
+    <Content Include="images\restaurants\14\the-warehouse-photo-01.jpg" />
+    <Content Include="images\restaurants\14\the-warehouse-photo-02.jpg" />
+    <Content Include="images\restaurants\14\the-warehouse-photo-03.jpg" />
+    <Content Include="images\restaurants\14\the-warehouse-photo-04.jpg" />
+    <Content Include="images\restaurants\14\the-warehouse-photo-05.jpg" />
+    <Content Include="images\restaurants\14\the-warehouse.jpg" />
+    <Content Include="images\restaurants\15\specific-gravity-pizzeria-photo-01.jpg" />
+    <Content Include="images\restaurants\15\specific-gravity-pizzeria-photo-02.jpg" />
+    <Content Include="images\restaurants\15\specific-gravity-pizzeria-photo-03.jpg" />
+    <Content Include="images\restaurants\15\specific-gravity-pizzeria-photo-04.jpg" />
+    <Content Include="images\restaurants\15\specific-gravity-pizzeria-photo-05.jpg" />
+    <Content Include="images\restaurants\15\specific-gravity-pizzeria.png" />
+    <Content Include="images\restaurants\21\buxys-salty-dog-photo-01.jpg" />
+    <Content Include="images\restaurants\21\buxys-salty-dog-photo-02.jpg" />
+    <Content Include="images\restaurants\21\buxys-salty-dog-photo-03.jpg" />
+    <Content Include="images\restaurants\21\buxys-salty-dog.jpg" />
+    <Content Include="images\restaurants\22\seacrets-photo-01.jpg" />
+    <Content Include="images\restaurants\22\seacrets-photo-02.jpg" />
+    <Content Include="images\restaurants\22\seacrets-photo-03.jpg" />
+    <Content Include="images\restaurants\22\seacrets-photo-04.jpg" />
+    <Content Include="images\restaurants\22\seacrets-photo-05.jpg" />
+    <Content Include="images\restaurants\22\seacrets.jpg" />
+    <Content Include="images\restaurants\24\fagers-island-photo-01.jpg" />
+    <Content Include="images\restaurants\24\fagers-island-photo-02.jpg" />
+    <Content Include="images\restaurants\24\fagers-island-photo-03.jpg" />
+    <Content Include="images\restaurants\24\fagers-island-photo-04.jpg" />
+    <Content Include="images\restaurants\24\fagers-island.jpg" />
+    <Content Include="images\restaurants\25\the-greene-turtle-the-original-photo-01.jpg" />
+    <Content Include="images\restaurants\25\the-greene-turtle-the-original-photo-02.jpg" />
+    <Content Include="images\restaurants\25\the-greene-turtle-the-original-photo-03.jpg" />
+    <Content Include="images\restaurants\25\the-greene-turtle-the-original-photo-04.jpg" />
+    <Content Include="images\restaurants\25\the-greene-turtle-the-original-photo-05.jpg" />
+    <Content Include="images\restaurants\25\the-greene-turtle-the-original.png" />
+    <Content Include="images\restaurants\26\mackys-bayside-photo-01.jpg" />
+    <Content Include="images\restaurants\26\mackys-bayside-photo-02.jpg" />
+    <Content Include="images\restaurants\26\mackys-bayside-photo-03.jpg" />
+    <Content Include="images\restaurants\26\mackys-bayside.png" />
+    <Content Include="images\restaurants\27\pickles-pub-photo-01.jpg" />
+    <Content Include="images\restaurants\27\pickles-pub-photo-02.JPG" />
+    <Content Include="images\restaurants\27\pickles-pub-photo-03.jpg" />
+    <Content Include="images\restaurants\27\pickles-pub-photo-04.JPG" />
+    <Content Include="images\restaurants\27\pickles-pub.png" />
+    <Content Include="images\restaurants\28\fish-tales-photo-01.jpg" />
+    <Content Include="images\restaurants\28\fish-tales-photo-02.jpg" />
+    <Content Include="images\restaurants\28\fish-tales-photo-03.jpg" />
+    <Content Include="images\restaurants\28\fish-tales-photo-04.jpg" />
+    <Content Include="images\restaurants\28\fish-tales.jpg" />
+    <Content Include="images\restaurants\29\mothers-cantina-photo-01.jpg" />
+    <Content Include="images\restaurants\29\mothers-cantina-photo-02.jpg" />
+    <Content Include="images\restaurants\29\mothers-cantina-photo-03.jpg" />
+    <Content Include="images\restaurants\29\mothers-cantina-photo-04.jpg" />
+    <Content Include="images\restaurants\29\mothers-cantina.jpg" />
+    <Content Include="images\restaurants\2\adams-taphouse-grille-photo-01.jpg" />
+    <Content Include="images\restaurants\2\adams-taphouse-grille-photo-02.jpg" />
+    <Content Include="images\restaurants\2\adams-taphouse-grille-photo-03.jpg" />
+    <Content Include="images\restaurants\2\adams-taphouse-grille-photo-04.jpg" />
+    <Content Include="images\restaurants\2\adams-taphouse-grille.png" />
+    <Content Include="images\restaurants\30\bjs-on-the-water-photo-01.jpg" />
+    <Content Include="images\restaurants\30\bjs-on-the-water-photo-02.jpg" />
+    <Content Include="images\restaurants\30\bjs-on-the-water-photo-03.jpg" />
+    <Content Include="images\restaurants\30\bjs-on-the-water.png" />
+    <Content Include="images\restaurants\31\bull-on-the-beach-photo-01.jpg" />
+    <Content Include="images\restaurants\31\bull-on-the-beach-photo-02.jpg" />
+    <Content Include="images\restaurants\31\bull-on-the-beach.jpg" />
+    <Content Include="images\restaurants\33\coconuts-beach-bar-grill-photo-01.jpg" />
+    <Content Include="images\restaurants\33\coconuts-beach-bar-grill-photo-02.jpg" />
+    <Content Include="images\restaurants\33\coconuts-beach-bar-grill-photo-03.jpg" />
+    <Content Include="images\restaurants\33\coconuts-beach-bar-grill.jpg" />
+    <Content Include="images\restaurants\35\the-edge-lounge-photo-01.jpg" />
+    <Content Include="images\restaurants\35\the-edge-lounge-photo-02.jpg" />
+    <Content Include="images\restaurants\35\the-edge-lounge-photo-03.jpg" />
+    <Content Include="images\restaurants\35\the-edge-lounge.jpg" />
+    <Content Include="images\restaurants\36\party-block-photo-01.jpg" />
+    <Content Include="images\restaurants\36\party-block-photo-02.jpg" />
+    <Content Include="images\restaurants\36\party-block-photo-03.jpg" />
+    <Content Include="images\restaurants\36\party-block-photo-04.jpg" />
+    <Content Include="images\restaurants\36\party-block.jpg" />
+    <Content Include="images\restaurants\38\big-peckers-bar-grill-photo-01.jpg" />
+    <Content Include="images\restaurants\38\big-peckers-bar-grill-photo-02.jpg" />
+    <Content Include="images\restaurants\38\big-peckers-bar-grill-photo-03.jpg" />
+    <Content Include="images\restaurants\38\big-peckers-bar-grill-photo-04.jpg" />
+    <Content Include="images\restaurants\38\big-peckers-bar-grill.jpg" />
+    <Content Include="images\restaurants\39\swellys-bar-billiards-photo-01.jpg" />
+    <Content Include="images\restaurants\39\swellys-bar-billiards-photo-02.jpg" />
+    <Content Include="images\restaurants\39\swellys-bar-billiards-photo-03.jpg" />
+    <Content Include="images\restaurants\39\swellys-bar-billiards-photo-04.jpg" />
+    <Content Include="images\restaurants\39\swellys-bar-billiards.jpg" />
+    <Content Include="images\restaurants\3\back-street-grill-photo-01.jpg" />
+    <Content Include="images\restaurants\3\back-street-grill-photo-02.jpg" />
+    <Content Include="images\restaurants\3\back-street-grill-photo-03.jpg" />
+    <Content Include="images\restaurants\3\back-street-grill-photo-04.jpg" />
+    <Content Include="images\restaurants\3\back-street-grill-photo-05.jpg" />
+    <Content Include="images\restaurants\3\back-street-grill.png" />
+    <Content Include="images\restaurants\40\vinnys-la-roma-photo-01.jpg" />
+    <Content Include="images\restaurants\40\vinnys-la-roma-photo-02.jpg" />
+    <Content Include="images\restaurants\40\vinnys-la-roma-photo-03.jpg" />
+    <Content Include="images\restaurants\40\vinnys-la-roma-photo-04.jpg" />
+    <Content Include="images\restaurants\40\vinnys-la-roma-photo-05.jpg" />
+    <Content Include="images\restaurants\40\vinnys-la-roma.gif" />
+    <Content Include="images\restaurants\40\vinnys-la-roma.png" />
+    <Content Include="images\restaurants\41\arenas-deli-and-bar-photo-01.jpg" />
+    <Content Include="images\restaurants\41\arenas-deli-and-bar-photo-02.jpg" />
+    <Content Include="images\restaurants\41\arenas-deli-and-bar-photo-03.jpg" />
+    <Content Include="images\restaurants\41\arenas-deli-and-bar-photo-04.jpg" />
+    <Content Include="images\restaurants\41\arenas-deli-and-bar-photo-05.jpg" />
+    <Content Include="images\restaurants\41\arenas-deli-and-bar.png" />
+    <Content Include="images\restaurants\42\dogfish-head-brewings-eats-photo-01.jpg" />
+    <Content Include="images\restaurants\42\dogfish-head-brewings-eats-photo-02.jpg" />
+    <Content Include="images\restaurants\42\dogfish-head-brewings-eats-photo-03.jpg" />
+    <Content Include="images\restaurants\42\dogfish-head-brewings-eats-photo-04.jpg" />
+    <Content Include="images\restaurants\42\dogfish-head-brewings-eats-photo-05.jpg" />
+    <Content Include="images\restaurants\42\dogfish-head-brewings-eats.png" />
+    <Content Include="images\restaurants\43\fins-fish-house-raw-bar-photo-01.jpg" />
+    <Content Include="images\restaurants\43\fins-fish-house-raw-bar-photo-02.jpg" />
+    <Content Include="images\restaurants\43\fins-fish-house-raw-bar-photo-03.jpg" />
+    <Content Include="images\restaurants\43\fins-fish-house-raw-bar-photo-04.jpg" />
+    <Content Include="images\restaurants\43\fins-fish-house-raw-bar-photo-05.jpg" />
+    <Content Include="images\restaurants\43\fins-fish-house-raw-bar.png" />
+    <Content Include="images\restaurants\44\blue-moon-restaurant-photo-01.jpg" />
+    <Content Include="images\restaurants\44\blue-moon-restaurant-photo-02.jpg" />
+    <Content Include="images\restaurants\44\blue-moon-restaurant-photo-03.jpg" />
+    <Content Include="images\restaurants\44\blue-moon-restaurant-photo-04.jpg" />
+    <Content Include="images\restaurants\44\blue-moon-restaurant-photo-05.jpg" />
+    <Content Include="images\restaurants\44\blue-moon-restaurant.png" />
+    <Content Include="images\restaurants\45\finbars-pub-grill-photo-01.jpg" />
+    <Content Include="images\restaurants\45\finbars-pub-grill-photo-02.jpg" />
+    <Content Include="images\restaurants\45\finbars-pub-grill-photo-03.jpg" />
+    <Content Include="images\restaurants\45\finbars-pub-grill-photo-04.jpg" />
+    <Content Include="images\restaurants\45\finbars-pub-grill-photo-05.jpg" />
+    <Content Include="images\restaurants\45\finbars-pub-grill.png" />
+    <Content Include="images\restaurants\46\summer-house-restaurant-and-saloon-photo-01.jpg" />
+    <Content Include="images\restaurants\46\summer-house-restaurant-and-saloon-photo-02.jpg" />
+    <Content Include="images\restaurants\46\summer-house-restaurant-and-saloon-photo-03.jpg" />
+    <Content Include="images\restaurants\46\summer-house-restaurant-and-saloon-photo-04.jpg" />
+    <Content Include="images\restaurants\46\summer-house-restaurant-and-saloon-photo-05.jpg" />
+    <Content Include="images\restaurants\46\summer-house-restaurant-and-saloon.png" />
+    <Content Include="images\restaurants\47\uno-chicago-grill-fruitland-photo-01.jpg" />
+    <Content Include="images\restaurants\47\uno-chicago-grill-fruitland-photo-02.jpg" />
+    <Content Include="images\restaurants\47\uno-chicago-grill-fruitland-photo-03.jpg" />
+    <Content Include="images\restaurants\47\uno-chicago-grill-fruitland-photo-04.jpg" />
+    <Content Include="images\restaurants\47\uno-chicago-grill-fruitland-photo-05.jpg" />
+    <Content Include="images\restaurants\47\uno-chicago-grill-fruitland.png" />
+    <Content Include="images\restaurants\48\purple-parrot-grill-photo-01.jpg" />
+    <Content Include="images\restaurants\48\purple-parrot-grill-photo-02.jpg" />
+    <Content Include="images\restaurants\48\purple-parrot-grill-photo-03.jpg" />
+    <Content Include="images\restaurants\48\purple-parrot-grill-photo-04.jpg" />
+    <Content Include="images\restaurants\48\purple-parrot-grill-photo-05.jpg" />
+    <Content Include="images\restaurants\48\purple-parrot-grill.png" />
+    <Content Include="images\restaurants\49\zoggs-raw-bar-grill-photo-01.jpg" />
+    <Content Include="images\restaurants\49\zoggs-raw-bar-grill-photo-02.jpg" />
+    <Content Include="images\restaurants\49\zoggs-raw-bar-grill-photo-03.jpg" />
+    <Content Include="images\restaurants\49\zoggs-raw-bar-grill-photo-04.jpg" />
+    <Content Include="images\restaurants\49\zoggs-raw-bar-grill-photo-05.jpg" />
+    <Content Include="images\restaurants\49\zoggs-raw-bar-grill.png" />
+    <Content Include="images\restaurants\4\break-time-sports-grill-pub-photo-01.jpg" />
+    <Content Include="images\restaurants\4\break-time-sports-grill-pub-photo-02.jpg" />
+    <Content Include="images\restaurants\4\break-time-sports-grill-pub-photo-03.JPG" />
+    <Content Include="images\restaurants\4\break-time-sports-grill-pub-photo-04.JPG" />
+    <Content Include="images\restaurants\4\break-time-sports-grill-pub-photo-05.JPG" />
+    <Content Include="images\restaurants\4\break-time-sports-grill-pub.png" />
+    <Content Include="images\restaurants\50\the-green-turtle-rehoboth-beach-photo-01.jpg" />
+    <Content Include="images\restaurants\50\the-green-turtle-rehoboth-beach-photo-02.jpg" />
+    <Content Include="images\restaurants\50\the-green-turtle-rehoboth-beach-photo-03.jpg" />
+    <Content Include="images\restaurants\50\the-green-turtle-rehoboth-beach-photo-04.jpg" />
+    <Content Include="images\restaurants\50\the-green-turtle-rehoboth-beach.png" />
+    <Content Include="images\restaurants\51\rigbys-bar-grill-photo-01.jpg" />
+    <Content Include="images\restaurants\51\rigbys-bar-grill-photo-02.jpg" />
+    <Content Include="images\restaurants\51\rigbys-bar-grill-photo-03.jpg" />
+    <Content Include="images\restaurants\51\rigbys-bar-grill-photo-04.jpg" />
+    <Content Include="images\restaurants\51\rigbys-bar-grill-photo-05.jpg" />
+    <Content Include="images\restaurants\51\rigbys-bar-grill.png" />
+    <Content Include="images\restaurants\52\the-pond-rehoboth-photo-01.jpg" />
+    <Content Include="images\restaurants\52\the-pond-rehoboth-photo-02.jpg" />
+    <Content Include="images\restaurants\52\the-pond-rehoboth-photo-03.jpg" />
+    <Content Include="images\restaurants\52\the-pond-rehoboth-photo-04.jpg" />
+    <Content Include="images\restaurants\52\the-pond-rehoboth-photo-05.jpg" />
+    <Content Include="images\restaurants\52\the-pond-rehoboth.png" />
+    <Content Include="images\restaurants\53\mojos-photo-01.jpg" />
+    <Content Include="images\restaurants\53\mojos-photo-02.jpg" />
+    <Content Include="images\restaurants\53\mojos-photo-03.jpg" />
+    <Content Include="images\restaurants\53\mojos-photo-04.jpg" />
+    <Content Include="images\restaurants\53\mojos-photo-05.jpg" />
+    <Content Include="images\restaurants\53\mojos.png" />
+    <Content Include="images\restaurants\54\the-globe-theater-photo-01.jpg" />
+    <Content Include="images\restaurants\54\the-globe-theater-photo-02.jpg" />
+    <Content Include="images\restaurants\54\the-globe-theater-photo-03.jpg" />
+    <Content Include="images\restaurants\54\the-globe-theater-photo-04.jpg" />
+    <Content Include="images\restaurants\54\the-globe-theater-photo-05.JPG" />
+    <Content Include="images\restaurants\54\the-globe-theater.png" />
+    <Content Include="images\restaurants\55\jcs-northside-pub-photo-01.jpg" />
+    <Content Include="images\restaurants\55\jcs-northside-pub-photo-02.jpg" />
+    <Content Include="images\restaurants\55\jcs-northside-pub-photo-03.jpg" />
+    <Content Include="images\restaurants\55\jcs-northside-pub-photo-04.jpg" />
+    <Content Include="images\restaurants\55\jcs-northside-pub-photo-05.jpg" />
+    <Content Include="images\restaurants\55\jcs-northside-pub.png" />
+    <Content Include="images\restaurants\56\conch-island-key-west-bar-and-grill-photo-01.jpg" />
+    <Content Include="images\restaurants\56\conch-island-key-west-bar-and-grill-photo-02.jpg" />
+    <Content Include="images\restaurants\56\conch-island-key-west-bar-and-grill-photo-03.jpg" />
+    <Content Include="images\restaurants\56\conch-island-key-west-bar-and-grill-photo-04.jpg" />
+    <Content Include="images\restaurants\56\conch-island-key-west-bar-and-grill-photo-05.jpg" />
+    <Content Include="images\restaurants\56\conch-island-key-west-bar-and-grill.png" />
+    <Content Include="images\restaurants\59\the-pour-house-photo-01.jpg" />
+    <Content Include="images\restaurants\59\the-pour-house-photo-02.jpg" />
+    <Content Include="images\restaurants\59\the-pour-house-photo-03.jpg" />
+    <Content Include="images\restaurants\59\the-pour-house-photo-04.jpg" />
+    <Content Include="images\restaurants\59\the-pour-house-photo-05.jpg" />
+    <Content Include="images\restaurants\59\the-pour-house.jpg" />
+    <Content Include="images\restaurants\5\brew-river-restaurant-bar-photo-01.JPG" />
+    <Content Include="images\restaurants\5\brew-river-restaurant-bar-photo-02.JPG" />
+    <Content Include="images\restaurants\5\brew-river-restaurant-bar-photo-03.JPG" />
+    <Content Include="images\restaurants\5\brew-river-restaurant-bar-photo-04.JPG" />
+    <Content Include="images\restaurants\5\brew-river-restaurant-bar-photo-05.JPG" />
+    <Content Include="images\restaurants\5\brew-river-restaurant-bar.png" />
+    <Content Include="images\restaurants\60\the-blue-ox-photo-01.JPG" />
+    <Content Include="images\restaurants\60\the-blue-ox-photo-02.jpg" />
+    <Content Include="images\restaurants\60\the-blue-ox-photo-03.jpg" />
+    <Content Include="images\restaurants\60\the-blue-ox-photo-04.jpg" />
+    <Content Include="images\restaurants\60\the-blue-ox.jpg" />
+    <Content Include="images\restaurants\61\the-sandbar-photo-01.jpg" />
+    <Content Include="images\restaurants\61\the-sandbar-photo-02.jpg" />
+    <Content Include="images\restaurants\61\the-sandbar-photo-03.jpg" />
+    <Content Include="images\restaurants\61\the-sandbar-photo-04.jpg" />
+    <Content Include="images\restaurants\61\the-sandbar-photo-05.jpg" />
+    <Content Include="images\restaurants\61\the-sandbar.png" />
+    <Content Include="images\restaurants\62\the-evo-craft-brewing-public-house-photo-01.jpg" />
+    <Content Include="images\restaurants\62\the-evo-craft-brewing-public-house-photo-02.jpg" />
+    <Content Include="images\restaurants\62\the-evo-craft-brewing-public-house-photo-03.jpg" />
+    <Content Include="images\restaurants\62\the-evo-craft-brewing-public-house-photo-04.jpg" />
+    <Content Include="images\restaurants\62\the-evo-craft-brewing-public-house-photo-05.jpg" />
+    <Content Include="images\restaurants\62\the-evo-craft-brewing-public-house.png" />
+    <Content Include="images\restaurants\63\rehoboth-ale-house-photo-01.jpg" />
+    <Content Include="images\restaurants\63\rehoboth-ale-house-photo-02.jpg" />
+    <Content Include="images\restaurants\63\rehoboth-ale-house-photo-03.jpg" />
+    <Content Include="images\restaurants\63\rehoboth-ale-house-photo-04.jpg" />
+    <Content Include="images\restaurants\63\rehoboth-ale-house-photo-05.jpg" />
+    <Content Include="images\restaurants\63\rehoboth-ale-house.jpg" />
+    <Content Include="images\restaurants\64\irish-eyes-pub-and-restaurant-photo-01.jpg" />
+    <Content Include="images\restaurants\64\irish-eyes-pub-and-restaurant-photo-02.jpg" />
+    <Content Include="images\restaurants\64\irish-eyes-pub-and-restaurant-photo-03.jpg" />
+    <Content Include="images\restaurants\64\irish-eyes-pub-and-restaurant-photo-04.jpg" />
+    <Content Include="images\restaurants\64\irish-eyes-pub-and-restaurant-photo-05.jpg" />
+    <Content Include="images\restaurants\64\irish-eyes-pub-and-restaurant.png" />
+    <Content Include="images\restaurants\65\rusty-rudder-photo-01.jpg" />
+    <Content Include="images\restaurants\65\rusty-rudder-photo-02.JPG" />
+    <Content Include="images\restaurants\65\rusty-rudder-photo-03.jpg" />
+    <Content Include="images\restaurants\65\rusty-rudder-photo-04.jpg" />
+    <Content Include="images\restaurants\65\rusty-rudder-photo-05.jpg" />
+    <Content Include="images\restaurants\65\rusty-rudder.jpg" />
+    <Content Include="images\restaurants\66\dos-locos-photo-01.jpg" />
+    <Content Include="images\restaurants\66\dos-locos-photo-02.jpg" />
+    <Content Include="images\restaurants\66\dos-locos-photo-03.jpg" />
+    <Content Include="images\restaurants\66\dos-locos-photo-04.jpg" />
+    <Content Include="images\restaurants\66\dos-locos-photo-05.jpg" />
+    <Content Include="images\restaurants\66\dos-locos.png" />
+    <Content Include="images\restaurants\67\the-starboard-restaurant-photo-01.jpg" />
+    <Content Include="images\restaurants\67\the-starboard-restaurant-photo-02.jpg" />
+    <Content Include="images\restaurants\67\the-starboard-restaurant-photo-03.jpg" />
+    <Content Include="images\restaurants\67\the-starboard-restaurant-photo-04.jpg" />
+    <Content Include="images\restaurants\67\the-starboard-restaurant-photo-05.jpg" />
+    <Content Include="images\restaurants\67\the-starboard-restaurant.jpg" />
+    <Content Include="images\restaurants\68\burley-oak-brewing-company-photo-01.jpg" />
+    <Content Include="images\restaurants\68\burley-oak-brewing-company-photo-02.jpg" />
+    <Content Include="images\restaurants\68\burley-oak-brewing-company-photo-03.jpg" />
+    <Content Include="images\restaurants\68\burley-oak-brewing-company-photo-04.jpg" />
+    <Content Include="images\restaurants\68\burley-oak-brewing-company-photo-05.jpg" />
+    <Content Include="images\restaurants\68\burley-oak-brewing-company.png" />
+    <Content Include="images\restaurants\70\the-irish-penny-pub-grill-photo-01.jpg" />
+    <Content Include="images\restaurants\70\the-irish-penny-pub-grill-photo-02.jpg" />
+    <Content Include="images\restaurants\70\the-irish-penny-pub-grill-photo-03.jpg" />
+    <Content Include="images\restaurants\70\the-irish-penny-pub-grill-photo-04.jpg" />
+    <Content Include="images\restaurants\70\the-irish-penny-pub-grill-photo-05.jpg" />
+    <Content Include="images\restaurants\70\the-irish-penny-pub-grill.jpg" />
+    <Content Include="images\restaurants\71\harborside-bar-and-grill-photo-01.jpg" />
+    <Content Include="images\restaurants\71\harborside-bar-and-grill-photo-02.jpg" />
+    <Content Include="images\restaurants\71\harborside-bar-and-grill-photo-03.jpg" />
+    <Content Include="images\restaurants\71\harborside-bar-and-grill-photo-04.jpg" />
+    <Content Include="images\restaurants\71\harborside-bar-and-grill.png" />
+    <Content Include="images\restaurants\72\stoney-lonen-restaurant-and-pub-photo-01.jpg" />
+    <Content Include="images\restaurants\72\stoney-lonen-restaurant-and-pub-photo-02.jpg" />
+    <Content Include="images\restaurants\72\stoney-lonen-restaurant-and-pub-photo-03.jpg" />
+    <Content Include="images\restaurants\72\stoney-lonen-restaurant-and-pub-photo-04.jpg" />
+    <Content Include="images\restaurants\72\stoney-lonen-restaurant-and-pub-photo-05.jpg" />
+    <Content Include="images\restaurants\72\stoney-lonen-restaurant-and-pub.jpg" />
+    <Content Include="images\restaurants\73\the-pickled-pig-pub-photo-01.jpg" />
+    <Content Include="images\restaurants\73\the-pickled-pig-pub-photo-02.jpg" />
+    <Content Include="images\restaurants\73\the-pickled-pig-pub-photo-03.jpg" />
+    <Content Include="images\restaurants\73\the-pickled-pig-pub-photo-04.jpg" />
+    <Content Include="images\restaurants\73\the-pickled-pig-pub-photo-05.jpg" />
+    <Content Include="images\restaurants\73\the-pickled-pig-pub.jpg" />
+    <Content Include="images\restaurants\74\pemberton-coffeehouse-and-bakery-photo-01.jpg" />
+    <Content Include="images\restaurants\74\pemberton-coffeehouse-and-bakery-photo-02.jpg" />
+    <Content Include="images\restaurants\74\pemberton-coffeehouse-and-bakery-photo-03.jpg" />
+    <Content Include="images\restaurants\74\pemberton-coffeehouse-and-bakery-photo-04.jpg" />
+    <Content Include="images\restaurants\74\pemberton-coffeehouse-and-bakery-photo-05.jpg" />
+    <Content Include="images\restaurants\74\pemberton-coffeehouse-and-bakery.png" />
+    <Content Include="images\restaurants\76\jam-bistro-photo-01.jpg" />
+    <Content Include="images\restaurants\76\jam-bistro-photo-02.jpg" />
+    <Content Include="images\restaurants\76\jam-bistro-photo-03.jpg" />
+    <Content Include="images\restaurants\76\jam-bistro-photo-04.jpg" />
+    <Content Include="images\restaurants\76\jam-bistro-photo-05.jpg" />
+    <Content Include="images\restaurants\76\jam-bistro.jpg" />
+    <Content Include="images\restaurants\77\hooters-of-ocean-city-photo-01.jpg" />
+    <Content Include="images\restaurants\77\hooters-of-ocean-city-photo-02.jpg" />
+    <Content Include="images\restaurants\77\hooters-of-ocean-city-photo-03.jpg" />
+    <Content Include="images\restaurants\77\hooters-of-ocean-city-photo-04.jpg" />
+    <Content Include="images\restaurants\77\hooters-of-ocean-city-photo-05.jpg" />
+    <Content Include="images\restaurants\77\hooters-of-ocean-city.jpg" />
+    <Content Include="images\restaurants\78\mister-pauls-legacy-photo-01.jpg" />
+    <Content Include="images\restaurants\78\mister-pauls-legacy-photo-02.jpg" />
+    <Content Include="images\restaurants\78\mister-pauls-legacy-photo-03.jpg" />
+    <Content Include="images\restaurants\78\mister-pauls-legacy-photo-04.jpg" />
+    <Content Include="images\restaurants\78\mister-pauls-legacy-photo-05.jpg" />
+    <Content Include="images\restaurants\78\mister-pauls-legacy.jpg" />
+    <Content Include="images\restaurants\79\station-7-west-ocean-city-photo-01.jpg" />
+    <Content Include="images\restaurants\79\station-7-west-ocean-city-photo-02.jpg" />
+    <Content Include="images\restaurants\79\station-7-west-ocean-city-photo-03.jpg" />
+    <Content Include="images\restaurants\79\station-7-west-ocean-city-photo-04.jpg" />
+    <Content Include="images\restaurants\79\station-7-west-ocean-city.png" />
+    <Content Include="images\restaurants\7\the-deli-photo-01.jpg" />
+    <Content Include="images\restaurants\7\the-deli-photo-02.jpg" />
+    <Content Include="images\restaurants\7\the-deli-photo-03.jpg" />
+    <Content Include="images\restaurants\7\the-deli-photo-04.jpg" />
+    <Content Include="images\restaurants\7\the-deli-photo-05.jpg" />
+    <Content Include="images\restaurants\7\the-deli.png" />
+    <Content Include="images\restaurants\80\roadie-joes-bar-and-grill-photo-01.jpg" />
+    <Content Include="images\restaurants\80\roadie-joes-bar-and-grill-photo-02.jpg" />
+    <Content Include="images\restaurants\80\roadie-joes-bar-and-grill-photo-03.jpg" />
+    <Content Include="images\restaurants\80\roadie-joes-bar-and-grill-photo-04.jpg" />
+    <Content Include="images\restaurants\80\roadie-joes-bar-and-grill.png" />
+    <Content Include="images\restaurants\81\the-cellar-door-tavern-photo-01.jpg" />
+    <Content Include="images\restaurants\81\the-cellar-door-tavern-photo-02.jpg" />
+    <Content Include="images\restaurants\81\the-cellar-door-tavern-photo-03.jpg" />
+    <Content Include="images\restaurants\81\the-cellar-door-tavern-photo-04.jpg" />
+    <Content Include="images\restaurants\81\the-cellar-door-tavern-photo-05.jpg" />
+    <Content Include="images\restaurants\81\the-cellar-door-tavern.jpg" />
+    <Content Include="images\restaurants\82\shays-pub-photo-01.jpg" />
+    <Content Include="images\restaurants\82\shays-pub-photo-02.jpg" />
+    <Content Include="images\restaurants\82\shays-pub-photo-03.jpg" />
+    <Content Include="images\restaurants\82\shays-pub.jpg" />
+    <Content Include="images\restaurants\83\casa-dileo-photo-01.jpg" />
+    <Content Include="images\restaurants\83\casa-dileo-photo-02.jpg" />
+    <Content Include="images\restaurants\83\casa-dileo-photo-03.jpg" />
+    <Content Include="images\restaurants\83\casa-dileo-photo-04.jpg" />
+    <Content Include="images\restaurants\83\casa-dileo-photo-05.jpg" />
+    <Content Include="images\restaurants\83\casa-dileo.jpg" />
+    <Content Include="images\restaurants\84\tall-tales-brewery-photo-01.jpg" />
+    <Content Include="images\restaurants\84\tall-tales-brewery-photo-02.jpg" />
+    <Content Include="images\restaurants\84\tall-tales-brewery-photo-03.jpg" />
+    <Content Include="images\restaurants\84\tall-tales-brewery-photo-04.jpg" />
+    <Content Include="images\restaurants\84\tall-tales-brewery-photo-05.jpg" />
+    <Content Include="images\restaurants\84\tall-tales-brewery.jpg" />
+    <Content Include="images\restaurants\85\echelon-sby-southern-bistro-lounge.jpg" />
+    <Content Include="images\restaurants\86\3rd-wave-brewing-co-photo-01.jpg" />
+    <Content Include="images\restaurants\86\3rd-wave-brewing-co-photo-02.jpg" />
+    <Content Include="images\restaurants\86\3rd-wave-brewing-co-photo-03.jpg" />
+    <Content Include="images\restaurants\86\3rd-wave-brewing-co-photo-04.jpg" />
+    <Content Include="images\restaurants\86\3rd-wave-brewing-co-photo-05.jpg" />
+    <Content Include="images\restaurants\86\3rd-wave-brewing-co.jpg" />
+    <Content Include="images\restaurants\87\the-brick-room-photo-01.png" />
+    <Content Include="images\restaurants\87\the-brick-room-photo-02.png" />
+    <Content Include="images\restaurants\87\the-brick-room-photo-03.png" />
+    <Content Include="images\restaurants\87\the-brick-room.png" />
+    <Content Include="images\restaurants\88\headquarters-live-photo-01.jpg" />
+    <Content Include="images\restaurants\88\headquarters-live-photo-02.jpg" />
+    <Content Include="images\restaurants\88\headquarters-live-photo-03.jpg" />
+    <Content Include="images\restaurants\88\headquarters-live-photo-04.jpg" />
+    <Content Include="images\restaurants\88\headquarters-live.png" />
+    <Content Include="images\restaurants\9\the-greene-turtle-salisbury-photo-01.jpg" />
+    <Content Include="images\restaurants\9\the-greene-turtle-salisbury-photo-02.jpg" />
+    <Content Include="images\restaurants\9\the-greene-turtle-salisbury-photo-03.jpg" />
+    <Content Include="images\restaurants\9\the-greene-turtle-salisbury-photo-04.jpg" />
+    <Content Include="images\restaurants\9\the-greene-turtle-salisbury.png" />
+    <Content Include="images\salisbury-md.png" />
+    <Content Include="images\share-bar-horizontal.png" />
+    <Content Include="images\small-ocmd.png" />
+    <Content Include="images\small-rbde.png" />
+    <Content Include="images\small-sbmd.png" />
+    <Content Include="images\smaller-header-logo.png" />
+    <Content Include="images\social-media-bar-inline.png" />
+    <Content Include="images\social-media-bar-vertical.png" />
+    <Content Include="images\test.png" />
+    <Content Include="images\tuj-facebook-profile-180.png" />
+    <Content Include="images\tuj-google-profile-250.png" />
+    <Content Include="images\tuj-og-image-400.png" />
+    <Content Include="images\tuj-pinterest-736.png" />
+    <Content Include="images\tuj-profile-default-300.png" />
+    <Content Include="images\tuj-twitter-profile-400.png" />
+    <Content Include="lightbox\css\lightbox.css" />
+    <Content Include="lightbox\css\screen.css" />
+    <Content Include="lightbox\img\close.png" />
+    <Content Include="lightbox\img\demopage\favicon.png" />
+    <Content Include="lightbox\img\demopage\image-1.jpg" />
+    <Content Include="lightbox\img\demopage\image-2.jpg" />
+    <Content Include="lightbox\img\demopage\image-3.jpg" />
+    <Content Include="lightbox\img\demopage\image-4.jpg" />
+    <Content Include="lightbox\img\demopage\image-5.jpg" />
+    <Content Include="lightbox\img\demopage\image-6.jpg" />
+    <Content Include="lightbox\img\demopage\thumb-1.jpg" />
+    <Content Include="lightbox\img\demopage\thumb-2.jpg" />
+    <Content Include="lightbox\img\demopage\thumb-3.jpg" />
+    <Content Include="lightbox\img\demopage\thumb-4.jpg" />
+    <Content Include="lightbox\img\demopage\thumb-5.jpg" />
+    <Content Include="lightbox\img\demopage\thumb-6.jpg" />
+    <Content Include="lightbox\img\loading.gif" />
+    <Content Include="lightbox\img\next.png" />
+    <Content Include="lightbox\img\prev.png" />
+    <Content Include="lightbox\index.html" />
+    <Content Include="lightbox\js\jquery-1.11.0.min.js" />
+    <Content Include="lightbox\js\lightbox.js" />
+    <Content Include="lightbox\js\lightbox.min.js" />
+    <Content Include="obj\Debug\tuj-app.csproj.FileListAbsolute.txt" />
+    <Content Include="packages.config" />
+    <Content Include="Account\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-3.1.1.js" />
+    <Content Include="Scripts\jquery-3.1.1.min.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
+    <Content Include="Social Stuff.txt" />
+    <Content Include="StatesList.ascx" />
+    <Content Include="x-journal.txt" />
+    <Content Include="y-journal.txt" />
+    <Content Include="media-kit.pdf" />
+    <Content Include="mobile.Master" />
+    <Content Include="Admin\admin.Master" />
+    <Content Include="App_Data\aj_users.sqlite" />
+    <Content Include="App_Data\aj_data.sqlite" />
+    <Content Include="lightbox\img\demopage\.DS_Store" />
+    <Content Include="lightbox\js\.DS_Store" />
+    <Content Include="lightbox\js\jquery-1.11.0.min.map" />
+    <Content Include="lightbox\js\lightbox.min.map" />
+    <Content Include="lightbox\README.markdown" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="App_Themes\akzidenz-grotesk-bold.ttf" />
+    <Content Include="privacy-policy.aspx" />
+    <Content Include="restaurant.aspx" />
+    <Content Include="robots.txt" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="share-bar.ascx" />
+    <Content Include="site-map.aspx" />
+    <Content Include="Site.Master" />
+    <Content Include="sitemap.xml" />
+    <Content Include="status-bar.ascx" />
+    <Content Include="stuff.txt" />
+    <Content Include="terms-of-use.aspx" />
+    <Content Include="test.aspx" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Bundle.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Site.Mobile.Master" />
+    <Content Include="three-column.Master" />
+    <Content Include="two-column.Master" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.1.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="about-us.aspx.cs">
+      <DependentUpon>about-us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="about-us.aspx.designer.cs">
+      <DependentUpon>about-us.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\AddPhoneNumber.aspx.cs">
+      <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\AddPhoneNumber.aspx.designer.cs">
+      <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Confirm.aspx.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Confirm.aspx.designer.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Forgot.aspx.cs">
+      <DependentUpon>Forgot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Forgot.aspx.designer.cs">
+      <DependentUpon>Forgot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Lockout.aspx.cs">
+      <DependentUpon>Lockout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Lockout.aspx.designer.cs">
+      <DependentUpon>Lockout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.designer.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ManageLogins.aspx.cs">
+      <DependentUpon>ManageLogins.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ManageLogins.aspx.designer.cs">
+      <DependentUpon>ManageLogins.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ManagePassword.aspx.cs">
+      <DependentUpon>ManagePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ManagePassword.aspx.designer.cs">
+      <DependentUpon>ManagePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ResetPasswordConfirmation.aspx.cs">
+      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ResetPasswordConfirmation.aspx.designer.cs">
+      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.cs">
+      <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.designer.cs">
+      <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\VerifyPhoneNumber.aspx.cs">
+      <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
+      <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\admin.Master.cs">
+      <DependentUpon>admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\admin.Master.designer.cs">
+      <DependentUpon>admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\advertiser-add.aspx.cs">
+      <DependentUpon>advertiser-add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\advertiser-add.aspx.designer.cs">
+      <DependentUpon>advertiser-add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\advertiser-edit.aspx.cs">
+      <DependentUpon>advertiser-edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\advertiser-edit.aspx.designer.cs">
+      <DependentUpon>advertiser-edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\event-add.aspx.cs">
+      <DependentUpon>event-add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\event-add.aspx.designer.cs">
+      <DependentUpon>event-add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\event-edit.aspx.cs">
+      <DependentUpon>event-edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\event-edit.aspx.designer.cs">
+      <DependentUpon>event-edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\link-add.aspx.cs">
+      <DependentUpon>link-add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\link-add.aspx.designer.cs">
+      <DependentUpon>link-add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\link-edit.aspx.cs">
+      <DependentUpon>link-edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\link-edit.aspx.designer.cs">
+      <DependentUpon>link-edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\restaurant-add.aspx.cs">
+      <DependentUpon>restaurant-add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\restaurant-add.aspx.designer.cs">
+      <DependentUpon>restaurant-add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\restaurant-add-bak.aspx.cs">
+      <DependentUpon>restaurant-add-bak.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\restaurant-add-bak.aspx.designer.cs">
+      <DependentUpon>restaurant-add-bak.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\restaurant-events.aspx.cs">
+      <DependentUpon>restaurant-events.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\restaurant-events.aspx.designer.cs">
+      <DependentUpon>restaurant-events.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\restaurant-image-2.aspx.cs">
+      <DependentUpon>restaurant-image-2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\restaurant-image-2.aspx.designer.cs">
+      <DependentUpon>restaurant-image-2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\restaurant-image-edit.aspx.cs">
+      <DependentUpon>restaurant-image-edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\restaurant-image-edit.aspx.designer.cs">
+      <DependentUpon>restaurant-image-edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\restaurant-image.aspx.cs">
+      <DependentUpon>restaurant-image.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\restaurant-image.aspx.designer.cs">
+      <DependentUpon>restaurant-image.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\restaurant-info.aspx.cs">
+      <DependentUpon>restaurant-info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\restaurant-info.aspx.designer.cs">
+      <DependentUpon>restaurant-info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\restaurant-schedule.aspx.cs">
+      <DependentUpon>restaurant-schedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\restaurant-schedule.aspx.designer.cs">
+      <DependentUpon>restaurant-schedule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\test-admin.aspx.cs">
+      <DependentUpon>test-admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\test-admin.aspx.designer.cs">
+      <DependentUpon>test-admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\accountpage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Start\basepage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\CatalogAccess.cs" />
+    <Compile Include="App_Start\GenericDataAccess.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\Link.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\TheUsualJointsConfiguration.cs" />
+    <Compile Include="App_Start\Utilities.cs" />
+    <Compile Include="CitiesList.ascx.cs">
+      <DependentUpon>CitiesList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CitiesList.ascx.designer.cs">
+      <DependentUpon>CitiesList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="city.aspx.cs">
+      <DependentUpon>city.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="city.aspx.designer.cs">
+      <DependentUpon>city.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contact-block.ascx.cs">
+      <DependentUpon>contact-block.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contact-block.ascx.designer.cs">
+      <DependentUpon>contact-block.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="contact-us.aspx.cs">
+      <DependentUpon>contact-us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contact-us.aspx.designer.cs">
+      <DependentUpon>contact-us.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CountriesList.ascx.cs">
+      <DependentUpon>CountriesList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CountriesList.ascx.designer.cs">
+      <DependentUpon>CountriesList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="disclaimer.aspx.cs">
+      <DependentUpon>disclaimer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="disclaimer.aspx.designer.cs">
+      <DependentUpon>disclaimer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="error.aspx.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="error.aspx.designer.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="footer.ascx.cs">
+      <DependentUpon>footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="footer.ascx.designer.cs">
+      <DependentUpon>footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="mobile.Master.cs">
+      <DependentUpon>mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mobile.Master.designer.cs">
+      <DependentUpon>mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="privacy-policy.aspx.cs">
+      <DependentUpon>privacy-policy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="privacy-policy.aspx.designer.cs">
+      <DependentUpon>privacy-policy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="restaurant.aspx.cs">
+      <DependentUpon>restaurant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="restaurant.aspx.designer.cs">
+      <DependentUpon>restaurant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="share-bar.ascx.cs">
+      <DependentUpon>share-bar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="share-bar.ascx.designer.cs">
+      <DependentUpon>share-bar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="site-map.aspx.cs">
+      <DependentUpon>site-map.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="site-map.aspx.designer.cs">
+      <DependentUpon>site-map.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="StatesList.ascx.cs">
+      <DependentUpon>StatesList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StatesList.ascx.designer.cs">
+      <DependentUpon>StatesList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="status-bar.ascx.cs">
+      <DependentUpon>status-bar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="status-bar.ascx.designer.cs">
+      <DependentUpon>status-bar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="terms-of-use.aspx.cs">
+      <DependentUpon>terms-of-use.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="terms-of-use.aspx.designer.cs">
+      <DependentUpon>terms-of-use.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="three-column.Master.cs">
+      <DependentUpon>three-column.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="three-column.Master.designer.cs">
+      <DependentUpon>three-column.Master</DependentUpon>
+    </Compile>
+    <Compile Include="two-column.Master.cs">
+      <DependentUpon>two-column.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="two-column.Master.designer.cs">
+      <DependentUpon>two-column.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\advertisers\" />
+    <Folder Include="images\restaurants\90\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>33428</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:33428/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

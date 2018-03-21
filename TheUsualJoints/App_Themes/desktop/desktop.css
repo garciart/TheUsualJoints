@@ -1,0 +1,412 @@
+﻿/* IN ORDER OF APPEARANCE */
+body {
+    background-color:black;
+    border:0; /* This removes the border around the viewport in old versions of IE */
+    font-family:sans-serif;
+}
+.status_bar {
+    color:white;
+    font-size:smaller;
+    text-align:right;
+}
+.default_status_bar {
+    color:white;
+    font-size:smaller;
+    margin:0 auto 0 auto;
+    text-align:right;
+    width:1024px;
+}
+.bottom_spacer {
+    padding-bottom:9px;
+}
+.city_disclaimer {
+
+}
+.default_Image1 {
+    width:100%;
+}
+.default_layout {
+    background:black url("main-background.png") no-repeat;
+    color:white;
+    font-weight:bold;
+    margin:0 auto 0 auto;
+    width:1024px;
+}
+.default_drop_div {
+    padding-top:140px; /* Keep text lower than background image title */
+}
+.default_text_div {
+    color:wheat;
+    font-size:x-large;
+    padding:0 48px; /* better than width & margin */
+    text-shadow:2px 2px 4px #000000;
+}
+.default_contact_nav {
+    padding-bottom:12px;
+    padding-top:12px;
+    text-align:center;
+}
+.default_contact_link_div {
+    display:inline;
+    padding:12px;
+    vertical-align:top;
+}
+a {
+    border:0;
+    color:#3b5998;
+    /* Jade Blue link color #00A9E0; */
+    /* Facebook Blue Hex:#3b5998 RGB:59,89,152 / Facebook Medium Blue Hex:#6d84b4 RGB:109,132,180 / Facebook Lighter Blue Hex:#afbdd4
+RGB:175,189,212 / Facebook Lightest Blue Hex:#d8dfea RGB:216,223,234 */
+    font-weight:bold;
+    text-decoration:none;
+}
+a:hover {
+    color:darkorange;
+    font-weight:bold;
+    text-decoration:underline;
+}
+img {
+    border:0;
+}
+.default_contact_link_img {
+    width:300px;
+}
+.footer {
+    background-color:black;
+    clear:both;
+    color:white;
+    font-size:small;
+    font-weight:bold;
+    min-width:1024px;
+    text-align:center;
+}
+.footer_copy {
+    padding-bottom:6px;
+}
+.login_link {
+    text-decoration:none;
+    color:white;
+}
+.footer_nav {
+    border:0;
+    color:#4682B4; /* Steel Blue */
+    /* Jade Blue link color #00A9E0; */
+    /* Facebook Blue Hex:#3b5998 RGB:59,89,152 / Facebook Medium Blue Hex:#6d84b4 RGB:109,132,180 / Facebook Lighter Blue Hex:#afbdd4
+RGB:175,189,212 / Facebook Lightest Blue Hex:#d8dfea RGB:216,223,234 */
+    font-weight:bold;
+    text-decoration:none;
+}
+    a.footer_nav:hover {
+        color:darkorange;
+        font-weight:bold;
+        text-decoration:underline;
+    }
+.disclaimer_img {
+    width:100%;
+}
+.clear {
+    clear:both;
+}
+.about_img {
+    float:left;
+}
+li {
+    list-style-type:square;
+    padding-bottom:3px;
+}
+.error_img {
+    width:100%;
+}
+.error_label {
+    color:red;
+    font-weight:bold;
+}
+.bicolumn_layout {
+    background-color:white;
+    color:black;
+    margin:0 auto 0 auto;
+    overflow:hidden;
+    padding-bottom:6px;
+    width:1023px; /* IE Fix */
+}
+/* Liquid Layouts thanks to http://matthewjamestaylor.com/blog/ultimate-3-column-holy-grail-pixels.htm */
+/* column container */
+.colmask {
+    clear:both;
+    float:left;
+    width:100%; /* width of whole page */
+    overflow:hidden; /* This chops off any overhanging divs */
+}
+/* common column settings */
+.colright,
+.colmid,
+.colleft {
+    float:left;
+    width:100%;
+    position:relative;
+}
+.col1,
+.col2,
+.col3 {
+    float:left;
+    position:relative;
+    padding:0 0 1em 0;
+    overflow:hidden;
+}
+/* 2-column page settings */
+.bicolumn_header {
+    background-color:black;
+}
+.bicolumn {
+    background:white; /* right column background colour */
+}
+    .bicolumn .colleft {
+        right:324px; /* right column width */
+        background:#fff; /* left column background colour */
+        border-right:solid 1px black;
+    }
+    .bicolumn .col1 {
+        width:676px; /* left column content width (column width (700) minus left (12) and right (12) padding) */
+        left:336px; /* right column width (324) plus left column left padding (12) */
+    }
+    .bicolumn .col2 {
+        width:300px; /* right column content width (column width (324) minus left (12) and right (12) padding) */
+        left:360px; /* (right column width (324)) plus (left column left (12) and right (12) padding) plus (right column left (12) padding) */
+    }
+.center_text {
+    text-align:center;
+}
+.banner_ad {
+    /* For Mobile Only */
+}
+.tricolumn_layout {
+    background-color:white;
+    color:black;
+    margin:0 auto 0 auto;
+    min-width:1314px; /* left col (312) + padding (6) + banner ad (728) + padding (6) + right col (262) */
+    padding-bottom:6px;
+}
+.tricolumn_header {
+    background-color:black;
+}
+.weather_span {
+    display:block !important;
+    float:right;
+    font-size:12px;
+    max-height:140px;
+    text-align:center;
+    vertical-align:top;
+    width:300px;
+}
+/* 3-column page settings */
+.tricolumn {
+    background:#eeeeee; /* Right column background colour */
+    min-width:1314px; /* left col (312) + padding (6) + banner ad (728) + padding (6) + right col (262) */
+}
+    .tricolumn .colmid {
+        float:left;
+        width:200%;
+        margin-left:-262px; /* Width of right column */
+        position:relative;
+        right:100%;
+        background:#fff; /* Center column background colour */
+        border-right:solid 1px black;
+    }
+    .tricolumn .colleft {
+        float:left;
+        width:100%;
+        margin-left:-50%;
+        position:relative;
+        left:574px; /* Left column width + right column width */
+        background:#eeeeee; /* Left column background colour */
+        border-right:solid 1px black;
+    }
+    .tricolumn .col1wrap {
+        float:left;
+        width:50%;
+        position:relative;
+        right:312px; /* Width of left column */
+    }
+    .tricolumn .col1 {
+        margin:0 268px 0 318px; /* Center column side padding:*/
+        /* Right padding = right column width + Center column right padding width */
+        /* Left padding = left column width + Center column left padding width */
+        position:relative;
+        left:200%;
+        overflow:hidden;
+    }
+    .tricolumn .col2 {
+        float:left;
+        float:right; /* This overrides the float:left above */
+        width:300px; /* Width of left column content (left column width minus left and right padding) */
+        position:relative;
+        right:6px; /* Width of the left-hand side padding on the left column */
+    }
+    .tricolumn .col3 {
+        float:left;
+        float:right; /* This overrides the float:left above */
+        width:250px; /* Width of right column content (right column width minus left and right padding) */
+        margin-right:18px; /* Width of right column right-hand padding + left column left and right padding */
+        position:relative;
+        left:50%;
+    }
+.tricolumn_main {
+    font-size:small;
+}
+.two_col_title_tag {
+    background:black url("../../images/misc-back-lo.jpg") no-repeat center left;
+    color:wheat;
+    margin:0;
+    padding:6px;
+    text-shadow:2px 2px 4px #000000;
+}
+.title_tag {
+    background:black url("../../images/misc-back-lo.jpg") no-repeat center left;
+    color:wheat;
+    padding:6px;
+    text-shadow:2px 2px 4px #000000;
+}
+.navcontainer ul {
+    margin:0;
+    padding:0;
+    list-style-type:none;
+}
+.navcontainer li {
+    padding-bottom:3px;
+    list-style-type:none;
+}
+.tricolumn_ad_img {
+    display:inline-block;
+    width:250px;
+}
+.facebook_iframe {
+    border:none;
+    overflow:hidden;
+    width:292px;
+    height:590px;
+}
+.city_DataList1 {
+    table-layout:fixed;
+    width:100%;
+}
+.city_div1 {
+    font-size:inherit;
+}
+.city_table1_tr {
+    vertical-align:top;
+}
+.city_table1_image_td {
+    padding-right:6px;
+}
+.city_table1_image {
+    width:100px;
+}
+.restaurant_div1 {
+    font-size:initial;
+}
+.restaurant_div2 {
+    width:100%;
+}
+.restaurant_img1_div {
+    text-align:center;
+}
+.restaurant_div3 {
+    float:left;
+    width:50%;
+}
+.restaurant_div4 {
+    float:left;
+    text-align:center;
+    width:50%;
+}
+.restaurant_Image1 {
+    border:10px solid black;
+}
+.restaurant_Panel1 {
+    background-color:Black;
+    height:102px;
+    overflow:hidden;
+    text-align:center;
+}
+.restaurant_table_chart {
+    width:100%;
+}
+.restaurant_table_tr {
+    padding:0;
+    margin:0;
+}
+.restaurant_table_td_heading {
+    border:1px solid black;
+    text-align:center;
+    padding:3px;
+}
+.restaurant_table_td_body {
+    border:1px solid black;
+    padding:3px;
+}
+.admin_div1 {
+    background-color:white;
+    font-size:small;
+    padding:12px;
+}
+textarea {
+    resize: none;
+}
+.schedule_td_id {
+    display:none;
+}
+tr {
+    vertical-align:top;
+}
+.special_event {
+    color:Red;
+    font-weight:bold;
+}
+.restaurant_td_weekday {
+    width:9em;
+}
+.admin_layout {
+    background-color:white;
+    color:black;
+    margin:0 auto 0 auto;
+    overflow:hidden;
+    padding-bottom:6px;
+    width:1279px; /* IE Fix */
+}
+input, textarea, select {
+    background-color:#E3EAEB;
+}
+.background_pic {
+    background:black url("../../images/misc-back-lo.jpg") top no-repeat;
+    background-size:100%;
+    color:wheat;
+    text-shadow:2px 2px 4px #000000;
+}
+.link_ul {
+    padding-left:1.2em;
+    margin:0;
+}
+.restaurant_events {
+    color:Red;
+    font-weight:bold;
+}
+.restaurant_thumb {
+    border-style:none;
+    height:90px;
+    padding:6px 3px 6px 0px;
+    vertical-align:middle;
+}
+.restaurant_schedule {
+    color:white;
+    width:100%;
+}
+.titles {
+    font-style:italic;
+    font-weight:bold;
+}
+.schedule_titles {
+    color:wheat;
+    font-style:italic;
+    font-weight:bold;
+    text-shadow:2px 2px 4px #000000;
+}

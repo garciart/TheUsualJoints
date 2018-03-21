@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /cgi-bin/
+Disallow: /Account/
+Disallow: /App_Data/
+Disallow: /App_Start/
+Disallow: /Account/
+Disallow: /bin/
+Disallow: /Scripts/

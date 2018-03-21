@@ -1,0 +1,74 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="mobile.master.cs" Inherits="TheUsualJoints.mobile" %>
+
+<%@ Register src="footer.ascx" tagname="footer" tagprefix="uc1" %>
+
+<!doctype html>
+<!-- Microdata markup added by Google Structured Data Markup Helper. -->
+<html itemscope itemtype="http://schema.org/WebPage" lang="en">
+<head runat="server">
+    <!--Leave in to be changed by code behind!-->
+    <title>The Usual Joints - What To Do Tonight!</title>
+    <meta name="description" content="We are your guide to what to do in Ocean City, Salisbury and Rehoboth Beach! Dining to dancing: Find out at The Usual Joints!" />
+    <meta name="keywords" content="what to do, restaurants, Ocean City, Salisbury, Rehoboth Beach" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <meta name="robots" content="noodp" />
+    <!--Remove this to test on localhost-->
+
+    <!---->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <script>document.createElement('main');</script>
+    <!--<noscript>Your browser does not support JavaScript</noscript>-->
+    <!--[if lt IE 9]>
+        <script src='<%# Page.ResolveUrl("scripts/html5shiv.js") %>'></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-23362016-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder> 
+</head>
+<body>
+    <form id="mobile_form1" class="mobile_form1" runat="server">
+        <div itemscope itemtype="http://schema.org/LocalBusiness" id="mobile_layout" class="mobile_layout" runat="server">
+        <header role="banner">
+            <div class="status_bar"><asp:PlaceHolder ID="status_bar_PlaceHolder1" runat="server"></asp:PlaceHolder></div>
+            <asp:Image ID="mobile_Image1" CssClass="mobile_Image1" runat="server" ImageUrl="~/images/clear-default-header-logo.png" AlternateText="Welcome to The Usual Joints - What To Do Tonight!" />
+        </header>
+        <div role="main">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div>
+        <footer role="contentinfo">
+            <uc1:footer ID="footer1" runat="server" />
+        </footer>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <asp:Panel ID="Panel1" runat="server" CssClass="banner_ad" Visible="false">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- 468x60, created 5/16/11 -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:468px;height:60px"
+                 data-ad-client="ca-pub-1431492374498284"
+                 data-ad-slot="2065702688"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </asp:Panel>
+        <asp:HyperLink ID="mobile_ad" runat="server" Target="_blank" CssClass="banner_ad" Visible="False" ImageWidth="100%" />
+    </form>
+</body>
+</html>

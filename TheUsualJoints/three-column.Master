@@ -1,0 +1,168 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="three-column.master.cs" Inherits="TheUsualJoints.three_column" %>
+
+<%@ Register src="footer.ascx" tagname="footer" tagprefix="uc1" %>
+<%@ Register Src="~/share-bar.ascx" TagPrefix="uc1" TagName="sharebar" %>
+
+
+<!doctype html>
+<!-- Microdata markup added by Google Structured Data Markup Helper. -->
+<html itemscope itemtype="http://schema.org/WebPage" lang="en">
+<head runat="server">
+    <!--Leave in to be changed by code behind!-->
+    <title>The Usual Joints - What To Do Tonight!</title>
+    <meta name="description" content="We are your guide to what to do in Ocean City, Salisbury and Rehoboth Beach! Dining to dancing: Find out at The Usual Joints!" />
+    <meta name="keywords" content="what to do, restaurants, Ocean City, Salisbury, Rehoboth Beach" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <meta name="robots" content="noodp" />
+    <!--Remove this to test on localhost-->
+
+    <!---->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <script>document.createElement('main');</script>
+    <!--<noscript>Your browser does not support JavaScript</noscript>-->
+    <!--[if lt IE 9]>
+        <script src='<%# Page.ResolveUrl("scripts/html5shiv.js") %>'></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-23362016-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder> 
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div itemscope itemtype="http://schema.org/LocalBusiness" id="tricolumn_layout" class="tricolumn_layout" runat="server">
+            <header role="banner" class="tricolumn_header">
+                <div class="status_bar"><asp:PlaceHolder ID="status_bar_PlaceHolder1" runat="server"></asp:PlaceHolder></div>
+                <div>
+                    <asp:Image ID="tricolumn_Image1" runat="server" />
+                    <span class="weather_span">
+                        <a id="weather_a1" runat="server" href="http://www.wunderground.com/cgi-bin/findweather/getForecast?query=zmw:21801.1.99999&bannertypeclick=wu_clean2day" target="_blank" title="Salisbury, Maryland Weather Forecast"><img id="weather_img" runat="server" src="http://weathersticker.wunderground.com/weathersticker/cgi-bin/banner/ban/wxBanner?bannertype=wu_clean2day_cond&airportcode=KSBY&ForcedCity=Salisbury&ForcedState=MD&zip=21801&language=EN" alt="Find more about Weather in Salisbury, MD" width="300" class="bottom_spacer" /></a>
+                        <br>
+                        <asp:HyperLink ID="weather_HyperLink1" runat="server" NavigateUrl="http://www.wunderground.com/cgi-bin/findweather/getForecast?query=zmw:21801.1.99999&bannertypeclick=wu_clean2day" Target="_blank" CssClass="footer_nav"/>
+                    </span>
+                </div>
+            </header>
+            <div role="main" class="tricolumn_main">
+                <div class="colmask tricolumn">
+                    <div class="colmid">
+                        <div class="colleft">
+                            <div class="col1wrap">
+                                <div class="col1">
+                                    <p class="center_text">
+                                        <asp:HyperLink ID="HyperLink2" runat="server" Target="_blank" CssClass="banner_ad" Visible="False"></asp:HyperLink>
+	                                </p>
+					                <!-- Column 1 start -->
+                                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                                    </asp:ContentPlaceHolder>
+                                    <p><asp:HyperLink ID="city_HyperLink2" runat="server" ToolTip="Back to Home Page" NavigateUrl="/Default.aspx" Visible="false" Text="[Back to Home Page]"></asp:HyperLink></p>
+                                    <hr />
+                                    <br />
+                                    <div class="center_text">
+                                        <a href="http://www.fandango.com/_movietimes?wss=link728x90" target="_blank" title="Find Theater Showtimes"><img src="http://www.statf.com/r95.1/redesign/areas/staticpages/img/linktous/search/728x90/v1.gif" alt="Find Theater Showtimes" class="banner_ad" /></a>
+	                                </div>
+ 				                    <!-- Column 1 end -->
+                                </div>
+                            </div>
+                            <div class="col2">
+				                <!-- Column 2 start -->
+                                <p><asp:HyperLink ID="tricolumn_HyperLink1" runat="server" ToolTip="Back to Home Page" NavigateUrl="/Default.aspx">[Back to Home Page]</asp:HyperLink></p>
+                                <asp:Panel ID="Panel1" runat="server" Visible="false">
+                                    <hr />
+                                    <h3 class="title_tag"><asp:Label ID="Label1" runat="server" Visible="False"></asp:Label></h3>
+                                    <asp:Repeater ID="Repeater2" runat="server">
+                                        <ItemTemplate>
+                                            <ul class="link_ul">
+                                                <li>
+                                                    <b></b><asp:HyperLink ID="HyperLink1" runat="server" Text='<%# HttpUtility.HtmlEncode(Eval("EventName").ToString()) %>' ToolTip='<%# HttpUtility.HtmlEncode(Eval("EventName").ToString()) %>' NavigateUrl='<%# HttpUtility.HtmlEncode(Eval("EventURL").ToString()) %>' Target="_blank"></asp:HyperLink></b>
+                                                    <br />
+                                                    <i><asp:Label ID="Label2" runat="server" Text='<%# HttpUtility.HtmlEncode(Eval("EventStart", "{0:ddd, MM/dd}").ToString()) %>'></asp:Label></i>
+                                                    <i><asp:Label ID="Label3" runat="server" Text='<%# HttpUtility.HtmlEncode(Eval("EventEnd", "{0:- ddd, MM/dd}").ToString()) %>'></asp:Label></i>
+                                                    <br />
+                                                    <asp:Label ID="Label4" runat="server" Text='<%# HttpUtility.HtmlEncode(Eval("EventDescription").ToString()) %>'></asp:Label>
+                                                </li>
+                                            </ul>
+                                        </ItemTemplate>
+                                    </asp:Repeater>
+                                </asp:Panel>
+                                <hr />
+                                <h3 class="title_tag">Share Us / Like Us!</h3>
+                                <uc1:sharebar runat="server" ID="sharebar" />
+                                <hr />
+                                <iframe id="facebook_iframe" runat="server" class="facebook_iframe" src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fwhatsupsalisbury&amp;width=292&amp;height=590&amp;show_faces=true&amp;colorscheme=light&amp;stream=true&amp;border_color&amp;header=true" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                                <hr />
+                                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                <!-- 300 x 250 -->
+                                <ins class="adsbygoogle"
+                                     style="display:inline-block;width:300px;height:250px"
+                                     data-ad-client="ca-pub-1431492374498284"
+                                     data-ad-slot="6889714521"></ins>
+                                <script>
+                                    (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                                <asp:Panel ID="Panel2" runat="server" Visible="false">
+                                    <hr />
+                                    <h3 class="title_tag"><asp:Label ID="Label5" runat="server" Visible="False"></asp:Label></h3>
+                                    <asp:Repeater ID="Repeater3" runat="server">
+                                        <ItemTemplate>
+                                            <ul class="link_ul">
+                                                <li>
+                                                    <b><asp:HyperLink ID="HyperLink1" runat="server" Text='<%# HttpUtility.HtmlEncode(Eval("LinkTitle").ToString()) %>' ToolTip='<%# HttpUtility.HtmlEncode(Eval("LinkTitle").ToString()) %>' NavigateUrl='<%# HttpUtility.HtmlEncode(Eval("LinkURL").ToString()) %>' Target="_blank"></asp:HyperLink></b>
+                                                </li>
+                                            </ul>
+                                        </ItemTemplate>
+                                    </asp:Repeater>
+                                </asp:Panel>
+                                <hr />
+                                <h3 class="title_tag">Hey!</h3>
+                                <p>Good food, good music, good friends means good times! Enjoy your night out, but please come back! Do you think you may have too much fun tonight in Salisbury? The price of a taxi ride or a room in a nearby hotel or motel will be worth it! Check the links below before you go:</p>
+                                <ul class="link_ul">
+                                    <li><a title="Find a Taxi!" href="http://maps.google.com/maps?q=taxis+21801" target="_blank">Find a Taxi!</a></li>
+                                    <li><a title="Find a Hotel or Motel!" href="http://maps.google.com/maps?q=hotel+motel+21801" target="_blank">Find a Hotel or Motel!</a></li>
+                                </ul>
+                                <hr />
+                                <!-- Column 2 end -->
+                            </div>
+                            <div class="col3">
+                                <!-- Column 3 start -->
+                                <div class="center_text">
+                                    <h3 class="title_tag center_text">Visit our partners!</h3>
+                                    <hr />
+                                    <asp:Repeater ID="Repeater1" runat="server" OnItemDataBound="Repeater1_ItemDataBound">
+                                        <ItemTemplate>
+                                            <a href='<%# HttpUtility.HtmlEncode(Eval("AdvertiserNavigateURL").ToString()) %>' target="_blank" title='<%# HttpUtility.HtmlEncode(Eval("AdvertiserAltText").ToString()) %>'>
+                                                <img id="Repeater1_img" runat="server" src="images/ads/netflix-180.jpg" alt='<%# HttpUtility.HtmlEncode(Eval("AdvertiserAltText").ToString()) %>' class="tricolumn_ad_img" />
+                                            </a>
+                                            <hr />
+                                        </ItemTemplate>
+                                    </asp:Repeater>
+                                </div>
+                                <a href="/contact-us.aspx" title="Contact Us!">Wrong band or DJ playing tonight? Can't find your bar or club on the list? Want to advertise with us? Click here and let us know!</a>
+                                <!-- Column 3 end -->
+			                </div>
+		                </div>
+	                </div>
+                </div>
+            </div>
+        </div>
+        <footer role="contentinfo" class="clear">
+            <br />
+            <uc1:footer ID="footer1" runat="server" />
+            <br />
+        </footer>
+        <!--Load scripts after page-->
+        <script type="text/javascript" src="http://www.fandango.com/affiliatewidget_srchban_728x90.js?a=3469553&r=603_479917" defer="defer"></script>
+    </form>
+</body>
+</html>

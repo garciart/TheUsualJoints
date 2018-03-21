@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.master.cs" Inherits="TheUsualJoints.Admin.admin" %>
+
+<%@ Register src="~/footer.ascx" tagname="footer" tagprefix="uc1" %>
+
+<!doctype html>
+<!-- Microdata markup added by Google Structured Data Markup Helper. -->
+<html itemscope itemtype="http://schema.org/WebPage" lang="en">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server" enctype="multipart/form-data" method="post">
+        <div itemscope itemtype="http://schema.org/LocalBusiness" id="admin_layout" class="admin_layout" runat="server">
+            <header role="banner" class="bicolumn_header">
+                <div class="status_bar"><asp:PlaceHolder ID="status_bar_PlaceHolder1" runat="server"></asp:PlaceHolder></div>
+                <a href="/Default.aspx" title="Back to Home Page">
+                    <img src="/images/admin-lores.png" alt="Welcome to The Usual Joints - What To Do Tonight!" title="Welcome to The Usual Joints - What To Do Tonight!" />
+                </a>
+            </header>
+            <noscript>
+                <p style="color:red"><strong>&nbsp;For full functionality, enable JavaScript: <a href="http://enable-javascript.com/" title="How to enable JavaScript in your browser">How to enable JavaScript in your browser</a></strong></p>
+            </noscript>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div>
+        <br />
+        <footer role="contentinfo" style="background-color:black;">
+            <uc1:footer ID="footer1" runat="server" />
+        </footer>
+        <br />
+    </form>
+</body>
+</html>

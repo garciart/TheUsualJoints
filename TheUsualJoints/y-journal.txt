@@ -1,0 +1,85 @@
+﻿20150209
+Setup a new ASP.NET Web Forms Site
+Added this file and a stuff.txt file
+Installed the latest versions of Microsoft SQL Server Compact Edition and EntityFramework.SqlServerCompact NuGet packages
+Replace the LocalDB connection string with SQL Server Compact connection strings for site data and user data to Web.config
+Added basic URL rewrite rules to Web.Config using Ruslany. (2009, April 8). 10 URL Rewriting Tips and Tricks | RuslanY Blog. Retrieved from http://ruslany.net/2009/04/10-url-rewriting-tips-and-tricks/ and Guthrie, S. (2010, April 20). ScottGu's Blog - Tip/Trick: Fix Common SEO Problems Using the URL Rewrite Extension. Retrieved from http://weblogs.asp.net/scottgu/tip-trick-fix-common-seo-problems-using-the-url-rewrite-extension
+Moved "Canonical Hostname" rule to stuff.txt until deployment
+Replaced favicon.ico
+Save, Build, Run
+
+20150212
+Created an Old Stuff folder and moved the original Default, Contact and About.aspx pages into folder
+Moved content from cleantuj to solution (most created using Beginning ASP.NET E-Commerce in C#):
+	about-us.aspx
+	city.aspx
+	contact-us.aspx
+	Default.aspx
+	disclaimer.aspx
+	error.aspx
+	footer.ascx
+	media-kit.pdf
+	mobile.master
+	privacy-policy.aspx
+	restaurant.aspx
+	robots.txt
+	share-bar.ascx
+	site-map.aspx
+	sitemap.xml
+	status-bar.ascx
+	terms-of-use.aspx
+	three-column.master
+	two-column.master
+	contact-block.ascx kept for the eventual launch of The Usual Joints' social media sites
+	App_Code/basepage,cs
+	App_Code/CatalogAccess.cs
+	App_Code/GenericDataAccess.cs
+	App_Code/Link.cs
+	App_Code/TheUsualJointsConfiguration.cs
+	App_Code/Utilities.cs
+	Complete App_Themes folder
+	Complete images folder
+	App_Data/tuj_site_data.sdf
+Add HTMLAgilityPack NuGet Package for tag parsing (see site-map.aspx.cs)
+Added Application_Error function to Global.asax
+Save, Build, Run
+Added <appSettings>, <globalization>, <httpModules>, <customErrors> to Web.config
+Temporarily allowed link to Login.aspx and Register.aspx to appear on Default.aspx
+Save, Build, Run
+Added Administrator, Manager, Owner and Advertiser Roles to AspNetRoles
+Added Roles dropdown list to Register.aspx
+Added loginview to status-bar.ascx
+Added log out message to logout event in status-bar.ascx
+Added Context.GetOwinContext().Authentication.SignOut(); to LoginStatus1_LoggingOut event to allow full logging out through OWIN
+Added Session.Abandon(); to LoginStatus1_LoggedOut event to allow logging out on Chrome and Firefox
+Added if (!IsPostBack) to three-column.master.cs to prevent rereading querystring after logging out
+Removed padding-bottom:6px from desktop.css
+Changed all SQL CommandText to use SqlCeParameters in CatalogAccess.cs
+Save, Build, Run
+Changed titles and links on Site.master (the administration master)
+Added roles to Register.aspx
+Evened out the left and right columns in the three-column.master. The new width is 1324px (The most popular screen size is 1366px)
+Added strong bold and emphasis on footer disclaimer for city.aspx and restaurant.aspx
+Added padding underneath the LoggedIn template in status-bar.ascx
+
+20150221
+Worked on mobile display
+
+20150223
+Downloaded, added and renamed restaurant pictures
+
+20150224
+Finished renaming restaurant pictures
+Added code to display restaurant logos
+
+20150226
+Add Facebook iframe
+Fixed datalist column width with table-layout:fixed
+
+TO DO - ADD EMAIL OR PHONE CONFIRMATION TO REGISTER.ASPX
+TO DO - ADD WEEKLY EVENTS DATA
+
+Added Telerik Kendo UI Professional NuGet package
+
+20150427
+Added Admin folder and subfolders
